@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Informática - Paraíso</title>
 
+    <link rel="icon" href="imgs/icone.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/index.css">
   </head>
 
@@ -36,6 +37,44 @@
       <p>
         A mais de 20 anos atuando em Paraisópolis e região. Atendimento expresso e eficaz, produtos de qualidade e mão de obra séria e responsável, buscando sempre a satisfação de nossos clientes!
       </p>
+    </section>
+
+    <section id="destaques">
+      <h2>Produtos em Destaque</h2>
+
+        <div class="carousel">
+          <button class="prev" onclick="moveSlide(-1)">❮</button>
+
+          <div class="carousel-track" id="carouselTrack">
+            
+            <div class="carousel-item">
+              <img src="imgs/rtx4060.jpg">
+              <h3>RTX 4060ti</h3>
+              <p>Alto desempenho</p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="imgs/IdeaPad Gaming.jpg">
+              <h3>IdeaPad Gaming</h3>
+              <p>Um notebook Gamer de verdade</p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="imgs/Lenovo Thinkpad.jpg">
+              <h3>Lenovo Thinkpad</h3>
+              <p>Trabalho e faculdade</p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="imgs/controle.jpg">
+              <h3>Controle Xbox One</h3>
+              <p>O verdadeiro conforto em forma de controle</p>
+            </div>
+
+          </div>
+
+          <button class="next" onclick="moveSlide(1)">❯</button>
+        </div>
     </section>
 
     <section id="servicos">
@@ -95,7 +134,7 @@
       <h2>Contato</h2>
       <p>📍 Paraisópolis, MG</p>
       <p>📞 (35) 9936-4266</p>
-      <a href="#">WhatsApp</a>
+      <a href="https://wa.me/553599364266">WhatsApp</a>
       <a href="https://www.google.com/maps?q=-22.55299272818086, -45.78072601099221" target="_blank" class="btn">
           Localização
       </a>
@@ -109,6 +148,26 @@
     function toggleMenu(){
       document.getElementById('menu').classList.toggle('active');
     }
+    </script>
+    
+    <script>
+      let index = 0;
+
+      function moveSlide(direction) {
+        const track = document.getElementById("carouselTrack");
+        const items = document.querySelectorAll(".carousel-item");
+
+        const total = items.length;
+
+        index += direction;
+
+        if (index < 0) index = total - 1;
+        if (index >= total) index = 0;
+
+        const width = items[0].clientWidth;
+
+        track.style.transform = `translateX(-${index * width}px)`;
+      }
     </script>
 
   </body>

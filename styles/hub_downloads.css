@@ -1,3 +1,10 @@
+:root{
+      --red:#ff1a1a;
+      --dark:#0d0d0d;
+      --card:#161616;
+      --soft:#1f1f1f;
+    }
+
 *{margin:0;padding:0;box-sizing:border-box}
 
 html{scroll-behavior:smooth}
@@ -39,7 +46,27 @@ nav a{
     text-decoration:none;
     color:#fff;
     font-weight:500;
+    position: relative; /* 🔥 ESSENCIAL */
+    display: inline-block; /* melhora o comportamento */
 }
+
+nav a::after{
+    content:"";
+    position:absolute;
+    bottom:-6px;
+    left:50%;
+    width:0%;
+    height:2px;
+    background:var(--red);
+    transition:0.3s;
+    transform:translateX(-50%);
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover::after{width:100%}
 
 /* MENU MOBILE */
 .menu-toggle{

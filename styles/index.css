@@ -45,12 +45,17 @@
     nav a::after{
         content:"";
         position:absolute;
-        bottom:-5px;
-        left:0;
+        bottom:-6px;
+        left:50%;
         width:0%;
         height:2px;
         background:var(--red);
-        transition:.3s;
+        transition:0.3s;
+        transform:translateX(-50%);
+    }
+
+    nav a:hover::after{
+        width:100%;
     }
 
     nav a:hover::after{width:100%}
@@ -252,3 +257,78 @@
 
       .menu-toggle{display:block}
     }
+
+    #destaques {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-item h3 {
+  margin-top: 10px;
+  color: #ff0000;
+}
+
+.carousel-item p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* BOTÕES */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  z-index: 10; /* 🔥 ISSO RESOLVE */
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background: #ff0000;
+}
+
+/* RESPONSIVO */
+@media(min-width: 768px) {
+  .carousel-item {
+    min-width: 50%;
+  }
+}
+
+@media(min-width: 1000px) {
+  .carousel-item {
+    min-width: 33.33%;
+  }
+}
