@@ -39,6 +39,42 @@
       </p>
     </section>
 
+    <section id="video-info">
+      <div class="video-container">
+
+        <!-- VÍDEO -->
+        <div class="video-box">
+          <video id="meuVideo" autoplay muted loop playsinline>
+            <source src="video/video1.mp4" type="video/mp4">
+          </video>
+
+          <div class="play-button" id="playBtn" onclick="toggleVideo()">▶</div>
+        </div>
+
+        <!-- TEXTO -->
+        <div class="text-box">
+          <h2>Veja como trabalhamos</h2>
+
+          <p>
+            Trabalhamos com equipamentos profissionais e atendimento rápido,
+            garantindo qualidade e confiança em cada serviço realizado.
+          </p>
+
+          <!-- ESTATÍSTICAS -->
+          <div class="stats">
+            <div><span class="count" data-target="20">0</span>+ anos</div>
+            <div><span class="count" data-target="500">0</span>+ clientes</div>
+            <div><span class="count" data-target="1000" style="font-size: 50px;">0</span>+ serviços</div>
+          </div>
+
+          <!-- <a href="https://wa.me/553599364266?text=Olá,%20vi%20o%20vídeo%20e%20quero%20mais%20informações" class="btn" style="color: red;">
+            Falar no WhatsApp
+          </a> -->
+        </div>
+
+      </div>
+    </section>
+
     <section id="destaques">
       <h2>Produtos em Destaque</h2>
 
@@ -148,6 +184,67 @@
     function toggleMenu(){
       document.getElementById('menu').classList.toggle('active');
     }
+    </script>
+
+    <script>
+    // PLAY / PAUSE
+    const video = document.getElementById("meuVideo");
+    const playBtn = document.getElementById("playBtn");
+
+    function toggleVideo() {
+      if (video.paused) {
+        video.play();
+        playBtn.style.display = "none";
+      } else {
+        video.pause();
+        playBtn.style.display = "flex";
+      }
+    }
+
+    // Quando vídeo começa sozinho → esconder botão
+    video.addEventListener("play", () => {
+      playBtn.style.display = "none";
+    });
+
+    // Quando pausa → mostrar botão
+    video.addEventListener("pause", () => {
+      playBtn.style.display = "flex";
+    });
+
+    // ANIMAÇÃO DOS NÚMEROS
+    const counters = document.querySelectorAll('.count');
+
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+
+        const update = () => {
+          const increment = target / 100;
+
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.floor(count);
+            setTimeout(update, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        update();
+      });
+    };
+
+    // ATIVAR AO APARECER NA TELA
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+        }
+      });
+    });
+
+    observer.observe(document.querySelector('#video-info'));
     </script>
     
     <script>
