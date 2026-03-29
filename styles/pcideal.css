@@ -1,0 +1,190 @@
+/*  */
+header {
+    margin-top: 70px;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid var(--red);
+}
+
+header h1 {
+    color: var(--red);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.game-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-selection label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn-select {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-select:hover {
+    background: #cc0000;
+}
+
+.pc-results {
+    margin-top: 40px;
+    display: none;
+    /* inicialmente escondido */
+    gap: 20px;
+    flex-direction: column;
+}
+
+.pc-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.pc-card h3 {
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.pc-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.pc-card ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* === GAME INFO CENTRALIZADO === */
+
+/* Loader centralizado */
+.loader {
+    display: none;
+    /* escondido por padrão */
+    position: fixed;
+    /* fixa na tela inteira, independente do scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    /* escurece o fundo */
+    color: var(--red);
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Esconder imagem e texto enquanto carrega */
+#gameImage,
+.info-block,
+#gameTitle {
+    display: none;
+}
+
+.game-info {
+    display: none;
+    /* inicial escondido */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    gap: 20px;
+    padding: 30px;
+    background: var(--soft);
+    border-radius: 15px;
+    border: 2px solid var(--red);
+}
+
+.game-info img {
+    width: 70%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-info img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.6);
+}
+
+.game-info h3 {
+    font-size: 32px;
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    color: #ccc;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Para destacar informações específicas */
+.game-info .info-block {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-info .info-block span {
+    background: var(--card);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid var(--red);
+}
+
+@media(min-width:768px) {
+    .pc-results {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pc-card {
+        width: 48%;
+    }
+}

@@ -1,192 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Informática - Paraíso</title>
 
-    <link rel="icon" href="imgs/icone.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/index.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash Informática - Paraíso</title>
 
-  <body>
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="icon" href="imgs/icone.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
 
-    <nav>
-      <h1>Flash Informática</h1>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <ul id="menu">
-        <li><a href="#">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="view/hub_downloads.html">Hub de Downloads</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+<body>
 
-    <header>
-      <h1>Flash Informática</h1>
-      <p>Soluções rápidas e profissionais para seu computador</p>
-      <div class="cta">
-        <a href="#contato" class="btn btn-primary">Fale Conosco</a>
-        <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+  <nav>
+    <h1>Flash Informática</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+      <li><a href="#">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="view/hub_downloads.html">Hub de Downloads</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Flash Informática</h1>
+    <p>Soluções rápidas e profissionais para seu computador</p>
+    <div class="cta">
+      <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+      <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+    </div>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre a Loja</h2>
+    <p>
+      A mais de 20 anos atuando em Paraisópolis e região. Atendimento expresso e eficaz, produtos de qualidade e mão de
+      obra séria e responsável, buscando sempre a satisfação de nossos clientes!
+    </p>
+  </section>
+
+  <section id="video-info">
+    <div class="video-container">
+
+      <!-- VÍDEO -->
+      <div class="video-box">
+        <video id="meuVideo" autoplay muted loop playsinline>
+          <source src="video/video1.mp4" type="video/mp4">
+        </video>
+
+        <div class="play-button" id="playBtn" onclick="toggleVideo()">▶</div>
       </div>
-    </header>
 
-    <section id="sobre">
-      <h2>Sobre a Loja</h2>
-      <p>
-        A mais de 20 anos atuando em Paraisópolis e região. Atendimento expresso e eficaz, produtos de qualidade e mão de obra séria e responsável, buscando sempre a satisfação de nossos clientes!
-      </p>
-    </section>
+      <!-- TEXTO -->
+      <div class="text-box">
+        <h2>Veja como trabalhamos</h2>
 
-    <section id="video-info">
-      <div class="video-container">
+        <p>
+          Trabalhamos com equipamentos profissionais e atendimento rápido,
+          garantindo qualidade e confiança em cada serviço realizado.
+        </p>
 
-        <!-- VÍDEO -->
-        <div class="video-box">
-          <video id="meuVideo" autoplay muted loop playsinline>
-            <source src="video/video1.mp4" type="video/mp4">
-          </video>
-
-          <div class="play-button" id="playBtn" onclick="toggleVideo()">▶</div>
+        <!-- ESTATÍSTICAS -->
+        <div class="stats">
+          <div><span class="count" data-target="20">0</span>+ anos</div>
+          <div><span class="count" data-target="500">0</span>+ clientes</div>
+          <div><span class="count" data-target="1000" style="font-size: 50px;">0</span>+ serviços</div>
         </div>
 
-        <!-- TEXTO -->
-        <div class="text-box">
-          <h2>Veja como trabalhamos</h2>
-
-          <p>
-            Trabalhamos com equipamentos profissionais e atendimento rápido,
-            garantindo qualidade e confiança em cada serviço realizado.
-          </p>
-
-          <!-- ESTATÍSTICAS -->
-          <div class="stats">
-            <div><span class="count" data-target="20">0</span>+ anos</div>
-            <div><span class="count" data-target="500">0</span>+ clientes</div>
-            <div><span class="count" data-target="1000" style="font-size: 50px;">0</span>+ serviços</div>
-          </div>
-
-          <!-- <a href="https://wa.me/553599364266?text=Olá,%20vi%20o%20vídeo%20e%20quero%20mais%20informações" class="btn" style="color: red;">
+        <!-- <a href="https://wa.me/553599364266?text=Olá,%20vi%20o%20vídeo%20e%20quero%20mais%20informações" class="btn" style="color: red;">
             Falar no WhatsApp
           </a> -->
+      </div>
+
+    </div>
+  </section>
+
+  <section id="destaques">
+    <h2>Produtos em Destaque</h2>
+
+    <div class="carousel">
+      <button class="prev" onclick="moveSlide(-1)">❮</button>
+
+      <div class="carousel-track" id="carouselTrack">
+
+        <div class="carousel-item">
+          <img src="imgs/rtx4060.jpg">
+          <h3>RTX 4060ti</h3>
+          <p>Alto desempenho</p>
+        </div>
+
+        <div class="carousel-item">
+          <img src="imgs/IdeaPad Gaming.jpg">
+          <h3>IdeaPad Gaming</h3>
+          <p>Um notebook Gamer de verdade</p>
+        </div>
+
+        <div class="carousel-item">
+          <img src="imgs/Lenovo Thinkpad.jpg">
+          <h3>Lenovo Thinkpad</h3>
+          <p>Trabalho e faculdade</p>
+        </div>
+
+        <div class="carousel-item">
+          <img src="imgs/controle.jpg">
+          <h3>Controle Xbox One</h3>
+          <p>O verdadeiro conforto em forma de controle</p>
         </div>
 
       </div>
-    </section>
 
-    <section id="destaques">
-      <h2>Produtos em Destaque</h2>
+      <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+  </section>
 
-        <div class="carousel">
-          <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <section id="pc-builder-cta">
+    <div class="cta-content">
 
-          <div class="carousel-track" id="carouselTrack">
-            
-            <div class="carousel-item">
-              <img src="imgs/rtx4060.jpg">
-              <h3>RTX 4060ti</h3>
-              <p>Alto desempenho</p>
-            </div>
-
-            <div class="carousel-item">
-              <img src="imgs/IdeaPad Gaming.jpg">
-              <h3>IdeaPad Gaming</h3>
-              <p>Um notebook Gamer de verdade</p>
-            </div>
-
-            <div class="carousel-item">
-              <img src="imgs/Lenovo Thinkpad.jpg">
-              <h3>Lenovo Thinkpad</h3>
-              <p>Trabalho e faculdade</p>
-            </div>
-
-            <div class="carousel-item">
-              <img src="imgs/controle.jpg">
-              <h3>Controle Xbox One</h3>
-              <p>O verdadeiro conforto em forma de controle</p>
-            </div>
-
-          </div>
-
-          <button class="next" onclick="moveSlide(1)">❯</button>
-        </div>
-    </section>
-
-    <section id="servicos">
-      <h2>Serviços</h2>
-
-      <div class="services">
-
-        <div class="card">
-          <h3>💻 Formatação Completa</h3>
-          <p>Deixe seu computador rápido novamente com instalação limpa e otimizada.</p>
-          <a href="#contato">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <h3>🛡️ Remoção de Vírus</h3>
-          <p>Eliminamos vírus, malwares e ameaças que deixam seu PC lento.</p>
-          <a href="#contato">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <h3>⚙️ Instalação de Softwares</h3>
-          <p>Instalação segura de programas essenciais para seu uso diário.</p>
-          <a href="#contato">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <h3>🎮 Montagem de PC Gamer</h3>
-          <p>Montamos máquinas personalizadas com alto desempenho.</p>
-          <a href="#contato">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <h3>💾 Backup e Recuperação</h3>
-          <p>Proteja seus dados ou recupere arquivos importantes.</p>
-          <a href="#contato">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <h3>🔧 Suporte Técnico</h3>
-          <p>Atendimento rápido para resolver qualquer problema.</p>
-          <a href="#contato">Solicitar</a>
-        </div>
-
+      <!-- IMAGEM -->
+      <div class="cta-image">
+        <img src="imgs/gta.jpg" alt="Setup Gamer">
       </div>
-    </section>
 
-    <section id="portfolio">
-      <h2>Serviços Realizados</h2>
-      <div class="portfolio">
-        <img src="imgs/Manutenção.png">
-        <img src="imgs/Formatação.png">
-        <img src="imgs/suporte.png">
+      <!-- TEXTO -->
+      <div class="cta-text">
+        <h2>Monte o PC ideal para seu jogo</h2>
+
+        <p>
+          Escolha o jogo que você quer jogar e descubra automaticamente
+          o computador ideal para rodar com desempenho máximo.
+        </p>
+
+        <a href="view/pcideal.html" class="cta-btn">
+          Montar meu PC agora
+        </a>
       </div>
-    </section>
 
-    <section id="contato" class="contact">
-      <h2>Contato</h2>
-      <p>📍 Paraisópolis, MG</p>
-      <p>📞 (35) 9936-4266</p>
-      <a href="https://wa.me/553599364266">WhatsApp</a>
-      <a href="https://www.google.com/maps?q=-22.55299272818086, -45.78072601099221" target="_blank" class="btn">
-          Localização
-      </a>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <p>Flash Paraíso Informática © 2026</p>
-    </footer>
+  <section id="servicos">
+    <h2>Serviços</h2>
 
-    <script>
-    function toggleMenu(){
+    <div class="services">
+
+      <div class="card">
+        <h3>💻 Formatação Completa</h3>
+        <p>Deixe seu computador rápido novamente com instalação limpa e otimizada.</p>
+        <a href="#contato">Solicitar</a>
+      </div>
+
+      <div class="card">
+        <h3>🛡️ Remoção de Vírus</h3>
+        <p>Eliminamos vírus, malwares e ameaças que deixam seu PC lento.</p>
+        <a href="#contato">Solicitar</a>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ Instalação de Softwares</h3>
+        <p>Instalação segura de programas essenciais para seu uso diário.</p>
+        <a href="#contato">Solicitar</a>
+      </div>
+
+      <div class="card">
+        <h3>🎮 Montagem de PC Gamer</h3>
+        <p>Montamos máquinas personalizadas com alto desempenho.</p>
+        <a href="#contato">Solicitar</a>
+      </div>
+
+      <div class="card">
+        <h3>💾 Backup e Recuperação</h3>
+        <p>Proteja seus dados ou recupere arquivos importantes.</p>
+        <a href="#contato">Solicitar</a>
+      </div>
+
+      <div class="card">
+        <h3>🔧 Suporte Técnico</h3>
+        <p>Atendimento rápido para resolver qualquer problema.</p>
+        <a href="#contato">Solicitar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Serviços Realizados</h2>
+    <div class="portfolio">
+      <img src="imgs/Manutenção.png">
+      <img src="imgs/Formatação.png">
+      <img src="imgs/suporte.png">
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2>Contato</h2>
+    <p>📍 Paraisópolis, MG</p>
+    <p>📞 (35) 9936-4266</p>
+    <a href="https://wa.me/553599364266">WhatsApp</a>
+    <a href="https://www.google.com/maps?q=-22.55299272818086, -45.78072601099221" target="_blank" class="btn">
+      Localização
+    </a>
+  </section>
+
+  <footer>
+    <p>Flash Paraíso Informática © 2026</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
-    </script>
+  </script>
 
-    <script>
+  <script>
     // PLAY / PAUSE
     const video = document.getElementById("meuVideo");
     const playBtn = document.getElementById("playBtn");
@@ -245,27 +273,28 @@
     });
 
     observer.observe(document.querySelector('#video-info'));
-    </script>
-    
-    <script>
-      let index = 0;
+  </script>
 
-      function moveSlide(direction) {
-        const track = document.getElementById("carouselTrack");
-        const items = document.querySelectorAll(".carousel-item");
+  <script>
+    let index = 0;
 
-        const total = items.length;
+    function moveSlide(direction) {
+      const track = document.getElementById("carouselTrack");
+      const items = document.querySelectorAll(".carousel-item");
 
-        index += direction;
+      const total = items.length;
 
-        if (index < 0) index = total - 1;
-        if (index >= total) index = 0;
+      index += direction;
 
-        const width = items[0].clientWidth;
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
 
-        track.style.transform = `translateX(-${index * width}px)`;
-      }
-    </script>
+      const width = items[0].clientWidth;
 
-  </body>
+      track.style.transform = `translateX(-${index * width}px)`;
+    }
+  </script>
+
+</body>
+
 </html>

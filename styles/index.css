@@ -1,264 +1,200 @@
-:root{
-      --red:#ff1a1a;
-      --dark:#0d0d0d;
-      --card:#161616;
-      --soft:#1f1f1f;
-    }
+/* HERO */
+header{
+    height:70vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('../imgs/Banner tecnológico2.png') center/cover;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
 
-    *{margin:0;padding:0;box-sizing:border-box}
+header h1{
+    font-size:2.5rem;
+    color:#fff;
+    margin-bottom:10px;
+}
 
-    html{scroll-behavior:smooth}
+header p{
+    color:#ccc;
+    max-width:600px;
+}
 
-    body{
-        font-family: 'Segoe UI', Arial, sans-serif;
-        background:var(--dark);
-        color:#fff;
-        line-height:1.6;
-    }
+.cta{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
-    /* NAV */
-    nav{
-        position:fixed;
-        top:0;
-        width:100%;
-        backdrop-filter: blur(10px);
-        background:rgba(0,0,0,0.7);
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:15px 25px;
-        border-bottom:1px solid rgba(255,0,0,0.3);
-        z-index:1000;
-    }
+.btn{
+    padding:12px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
-    nav h1{color:var(--white);font-size:20px}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:#cc0000}
 
-    nav ul{list-style:none;display:flex;gap:25px}
+.btn-outline{
+    border:1px solid var(--red);
+    color:var(--red);
+}
+.btn-outline:hover{background:var(--red);color:#fff}
 
-    nav a{
-        text-decoration:none;
-        color:#fff;
-        font-weight:500;
-        position:relative;
-    }
+section{
+    padding:70px 20px;
+    max-width:1100px;
+    margin:auto;
+}
 
-    nav a::after{
-        content:"";
-        position:absolute;
-        bottom:-6px;
-        left:50%;
-        width:0%;
-        height:2px;
-        background:var(--red);
-        transition:0.3s;
-        transform:translateX(-50%);
-    }
+h2{
+    color:var(--red);
+    margin-bottom:25px;
+    font-size:1.8rem;
+}
 
-    nav a:hover::after{
-        width:100%;
-    }
+/* CARDS */
+.services{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
 
-    nav a:hover::after{width:100%}
+@media(min-width:700px){
+  .services{grid-template-columns:repeat(2,1fr)}
+}
 
-    .menu-toggle{display:none;font-size:24px;cursor:pointer}
+@media(min-width:1000px){
+  .services{grid-template-columns:repeat(3,1fr)}
+}
 
-    /* HERO */
-    header{
-        height:70vh;
-        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('../imgs/Banner tecnológico2.png') center/cover;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        text-align:center;
-        padding:20px;
-        margin-top:60px;
-    }
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #222;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
 
-    header h1{
-        font-size:2.5rem;
-        color:#fff;
-        margin-bottom:10px;
-    }
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background:var(--red);
+}
 
-    header p{
-        color:#ccc;
-        max-width:600px;
-    }
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 15px rgba(255,0,0,0.3);
+}
 
-    .cta{
-        margin-top:20px;
-        display:flex;
-        gap:10px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+.card h3 {
+    margin-bottom: 10px;
+    color: #ff0000;
+    font-size: 18px;
+}
 
-    .btn{
-        padding:12px 20px;
-        border-radius:6px;
-        text-decoration:none;
-        font-weight:bold;
-        transition:.3s;
-    }
+.card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
 
-    .btn-primary{background:var(--red);color:#fff}
-    .btn-primary:hover{background:#cc0000}
+.card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
 
-    .btn-outline{
-        border:1px solid var(--red);
-        color:var(--red);
-    }
-    .btn-outline:hover{background:var(--red);color:#fff}
+.card a:hover {
+    background: #cc0000;
+}
 
-    section{
-        padding:70px 20px;
-        max-width:1100px;
-        margin:auto;
-    }
+/* PORTFOLIO */
+.portfolio{
+    display:grid;
+    gap:15px;
+}
 
-    h2{
-        color:var(--red);
-        margin-bottom:25px;
-        font-size:1.8rem;
-    }
+@media(min-width:700px){
+  .portfolio{grid-template-columns:repeat(2,1fr)}
+}
 
-    /* CARDS */
-    .services{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:20px;
-    }
+@media(min-width:1000px){
+  .portfolio{grid-template-columns:repeat(3,1fr)}
+}
 
-    @media(min-width:700px){
-      .services{grid-template-columns:repeat(2,1fr)}
-    }
+.portfolio img{
+    width:100%;
+    border-radius:10px;
+    transition:.3s;
+}
 
-    @media(min-width:1000px){
-      .services{grid-template-columns:repeat(3,1fr)}
-    }
+.portfolio img:hover{
+    transform:scale(1.05);
+}
 
-    .card{
-        background:var(--card);
-        padding:25px;
-        border-radius:12px;
-        border:1px solid #222;
-        transition:.3s;
-        position:relative;
-        overflow:hidden;
-    }
+/* CONTACT */
+.contact{
+    text-align:center;
+    background:var(--soft);
+    border-radius:10px;
+    padding:40px 20px;
+}
 
-    .card::before{
-        content:"";
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:3px;
-        background:var(--red);
-    }
+.contact a{
+    display:inline-block;
+    margin:10px;
+    padding:12px 20px;
+    background:var(--red);
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+}
 
-    .card:hover{
-        transform:translateY(-5px);
-        box-shadow:0 0 15px rgba(255,0,0,0.3);
-    }
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    margin-top:40px;
+    font-size:14px;
+}
 
-    .card h3 {
-        margin-bottom: 10px;
-        color: #ff0000;
-        font-size: 18px;
-    }
+/* MOBILE MENU */
+@media(max-width:768px){
+  nav ul{
+    position:absolute;
+    top:60px;
+    right:0;
+    width:220px;
+    flex-direction:column;
+    background:#111;
+    display:none;
+    padding:15px;
+  }
 
-    .card p {
-        font-size: 14px;
-        color: #ccc;
-        margin-bottom: 15px;
-    }
+  nav ul.active{display:flex}
 
-    .card a {
-        display: inline-block;
-        padding: 8px 15px;
-        background: #ff0000;
-        color: #fff;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 14px;
-        transition: 0.3s;
-    }
+  .menu-toggle{display:block}
+}
 
-    .card a:hover {
-        background: #cc0000;
-    }
-
-    /* PORTFOLIO */
-    .portfolio{
-        display:grid;
-        gap:15px;
-    }
-
-    @media(min-width:700px){
-      .portfolio{grid-template-columns:repeat(2,1fr)}
-    }
-
-    @media(min-width:1000px){
-      .portfolio{grid-template-columns:repeat(3,1fr)}
-    }
-
-    .portfolio img{
-        width:100%;
-        border-radius:10px;
-        transition:.3s;
-    }
-
-    .portfolio img:hover{
-        transform:scale(1.05);
-    }
-
-    /* CONTACT */
-    .contact{
-        text-align:center;
-        background:var(--soft);
-        border-radius:10px;
-        padding:40px 20px;
-    }
-
-    .contact a{
-        display:inline-block;
-        margin:10px;
-        padding:12px 20px;
-        background:var(--red);
-        color:#fff;
-        border-radius:6px;
-        text-decoration:none;
-    }
-
-    footer{
-        text-align:center;
-        padding:20px;
-        background:#111;
-        margin-top:40px;
-        font-size:14px;
-    }
-
-    /* MOBILE MENU */
-    @media(max-width:768px){
-      nav ul{
-        position:absolute;
-        top:60px;
-        right:0;
-        width:220px;
-        flex-direction:column;
-        background:#111;
-        display:none;
-        padding:15px;
-      }
-
-      nav ul.active{display:flex}
-
-      .menu-toggle{display:block}
-    }
-
-    #destaques {
+  #destaques {
   max-width: 1100px;
   margin: auto;
   padding: 60px 20px;
@@ -410,5 +346,83 @@
 @media (min-width: 768px) {
   .video-container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* MONTE SEU PC */
+#pc-builder-cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0d0d0d, #1a0000);
+}
+
+.cta-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+/* IMAGEM */
+.cta-image {
+  overflow: hidden;
+  border-radius: 15px;
+  transition: box-shadow 0.4s ease;
+  box-shadow: 0 0 30px rgba(255,0,0,0.3);
+}
+
+.cta-image img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+/* HOVER */
+.cta-image:hover {
+  box-shadow: 0 0 60px rgba(255,0,0,0.7);
+}
+
+.cta-image:hover img {
+  transform: scale(1.08);
+}
+
+/* TEXTO */
+.cta-text h2 {
+  color: #ff0000;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.cta-text p {
+  color: #ccc;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+/* BOTÃO */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+  .cta-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-text h2 {
+    font-size: 32px;
   }
 }

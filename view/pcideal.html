@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC ideal</title>
+
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="icon" href="../imgs/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/pcideal.css">
+
+    <script type="module" src="../js/pcideal.js"></script>
+</head>
+
+<body>
+    <nav>
+        <h1>Flash Informática</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="hub_downloads.html">Hub de Downloads</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Monte seu PC para o Jogo</h1>
+        <p>Selecione o jogo que deseja jogar e veja a configuração mínima e recomendada para rodá-lo.</p>
+    </header>
+
+    <div class="container">
+
+        <div class="game-selection" id="game-selection">
+            <label for="game">Escolha o Jogo:</label>
+            <select id="game">
+                <option value="">-- Selecione um jogo --</option>
+            </select>
+            <button class="btn-select" onclick="showPCs()">Ver Configurações</button>
+        </div>
+
+        <div id="loader" class="loader">Carregando...</div>
+        <div class="game-info" id="gameInfo">
+            <img id="gameImage" src="" alt="Imagem do Jogo">
+            <h3 id="gameTitle"></h3>
+            <div class="info-block">
+                <span id="gameRelease">Ano</span>
+                <span id="gamePlatforms">Plataformas</span>
+                <span id="gameCompany">Empresa</span>
+            </div>
+        </div>
+
+        <div class="pc-results" id="pcResults">
+            <!-- Computador Base -->
+            <div class="pc-card" id="basePC">
+                <h3>💻 Computador Base</h3>
+                <ul id="baseSpecs">
+                    <!-- Aqui o JS vai inserir as specs -->
+                </ul>
+            </div>
+
+            <!-- Computador Ideal -->
+            <div class="pc-card" id="idealPC">
+                <h3>🚀 Computador Ideal</h3>
+                <ul id="idealSpecs">
+                    <!-- Aqui o JS vai inserir as specs -->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Flash Paraíso Informática © 2026</p>
+    </footer>
+
+</body>
+
+</html>
