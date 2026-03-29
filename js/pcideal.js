@@ -19,7 +19,18 @@ function populateGameOptions() {
 }
 
 // Chama ao carregar a página
-window.addEventListener('DOMContentLoaded', populateGameOptions);
+
+window.addEventListener('DOMContentLoaded', () => {
+    populateGameOptions();
+
+    const select = document.getElementById('game');
+
+    select.addEventListener('change', () => {
+        if (select.value) {
+            showPCs();
+        }
+    });
+});
 
 function toggleMenu() {
     document.getElementById('menu').classList.toggle('active');
@@ -39,6 +50,19 @@ function showPCs() {
     const description = pcDatabase[game].description;
     const company = pcDatabase[game].company;
     const release = pcDatabase[game].release;
+
+    const video = pcDatabase[game].video;
+
+    const videoContainer = document.getElementById('gameVideo');
+    const videoFrame = document.getElementById('gameVideoFrame');
+
+    if (video) {
+        videoFrame.src = video;
+        videoContainer.style.display = 'block';
+    } else {
+        videoFrame.src = '';
+        videoContainer.style.display = 'none';
+    }
 
     const baseSpecs = document.getElementById('baseSpecs');
     const idealSpecs = document.getElementById('idealSpecs');

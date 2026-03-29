@@ -39,7 +39,7 @@
             <select id="game">
                 <option value="">-- Selecione um jogo --</option>
             </select>
-            <button class="btn-select" onclick="showPCs()">Ver Configurações</button>
+            <!-- <button class="btn-select" onclick="showPCs()">Ver Configurações</button> -->
         </div>
 
         <div id="loader" class="loader">Carregando...</div>
@@ -69,6 +69,11 @@
                     <!-- Aqui o JS vai inserir as specs -->
                 </ul>
             </div>
+        </div>
+
+        <div class="game-video" id="gameVideo" style="display: none; margin-top: 4vh;">
+            <iframe id="gameVideoFrame" width="100%" height="400" src="" frameborder="0" allowfullscreen>
+            </iframe>
         </div>
 
     </div>

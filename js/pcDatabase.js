@@ -48,11 +48,12 @@ export const pcDatabase = {
         description: "GTA V é um jogo de ação e aventura em mundo aberto, onde você acompanha três protagonistas em Los Santos.",
         company: "Rockstar Games",
         release: "2013",
+        video: "https://www.youtube.com/embed/Ua3x3exKLjY",
         base: {
             "Processador": "Intel i5-3470",
             "Placa Mãe": "ASUS H81",
             "Memória RAM": "8GB DDR3",
-            "Placa de Vídeo": "GTX 660",
+            "Placa de Vídeo": "GTX 750ti 4GB",
             "SSD": "240GB",
             "Fonte": "500W"
         },
@@ -83,6 +84,28 @@ export const pcDatabase = {
             "Placa Mãe": "ASUS Z390",
             "Memória RAM": "16GB DDR4",
             "Placa de Vídeo": "RTX 2070",
+            "SSD": "1TB NVMe",
+            "Fonte": "650W"
+        }
+    },
+    "Red Dead Redemption 2": {
+        image: "../imgs/capas/reddeadredemption2.jpg",
+        description: "Red Dead Redemption 2 é um jogo de ação em mundo aberto no Velho Oeste, onde você vive a história de Arthur Morgan, um fora da lei em busca de sobrevivência e redenção.",
+        company: "Rockstar Games",
+        release: "2018",
+        base: {
+            "Processador": "Intel i5-2500K",
+            "Placa Mãe": "ASUS H61",
+            "Memória RAM": "8GB DDR3",
+            "Placa de Vídeo": "GTX 1650 4GB",
+            "SSD": "420GB",
+            "Fonte": "500W"
+        },
+        ideal: {
+            "Processador": "Intel i7-8700K",
+            "Placa Mãe": "ASUS Z370",
+            "Memória RAM": "16GB DDR4",
+            "Placa de Vídeo": "RTX 3060",
             "SSD": "1TB NVMe",
             "Fonte": "650W"
         }
