@@ -1,75 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-br">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub de downloads</title>
+    <title>Flash Informática - Paraíso</title>
 
-    <link rel="stylesheet" href="styles.css">
-</head>
-    <body>
-        <header>
-            <h1>Flash Paraíso</h1>
-            <p>Hub de Downloads Técnicos</p>
-        </header>
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
 
-        <div class="container">
+  <body>
 
-        <div class="category">
-            <h2>Programas Essenciais</h2>
+    <nav>
+      <h1>Flash Paraíso</h1>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul id="menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="view/hub_downloads.html">Hub de Downloads</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
-            <div class="card">
-                <span>AnyDesk</span>
-                <a href="https://flashparaiso-downloads.s3.sa-east-1.amazonaws.com/AnyDesk.exe" class="btn">Download</a>
-            </div>
+    <header>
+      <h1>Flash Informática</h1>
+      <p>Soluções rápidas e profissionais para seu computador</p>
+      <div class="cta">
+        <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+        <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+      </div>
+    </header>
 
-            <div class="card">
-                <span>Avast</span>
-                <a href="https://flashparaiso-downloads.s3.sa-east-1.amazonaws.com/avast_gr%C3%A1tis_antiv%C3%ADrus_configura%C3%A7%C3%A3o_online.exe" class="btn">Download</a>
-            </div>
+    <section id="sobre">
+      <h2>Sobre a Loja</h2>
+      <p>
+        A mais de 20 anos atuando em Paraisópolis e região. Atendimento expresso e eficaz, produtos de qualidade e mão de obra séria e responsável, buscando sempre a satisfação de nossos clientes!
+      </p>
+    </section>
 
-            <div class="card">
-                <span>Google Chrome</span>
-                <a href="https://flashparaiso-downloads.s3.sa-east-1.amazonaws.com/ChromeSetup.exe" class="btn">Download</a>
-            </div>
+    <section id="servicos">
+      <h2>Serviços</h2>
 
+      <div class="services">
 
-
+        <div class="card">
+          <h3>💻 Formatação Completa</h3>
+          <p>Deixe seu computador rápido novamente com instalação limpa e otimizada.</p>
+          <a href="#contato">Solicitar</a>
         </div>
 
-        <div class="category">
-            <h2>Arquivos</h2>
-
-            <div class="card">
-                <span>Rede Windows 11</span>
-                <a href="https://flashparaiso-downloads.s3.sa-east-1.amazonaws.com/rede+windows+11.rar" class="btn">Download</a>
-            </div>
+        <div class="card">
+          <h3>🛡️ Remoção de Vírus</h3>
+          <p>Eliminamos vírus, malwares e ameaças que deixam seu PC lento.</p>
+          <a href="#contato">Solicitar</a>
         </div>
 
-        <div class="category">
-            <h2>Utilitários</h2>
-
-            <div class="card">
-                <span>Adobe Reader</span>
-                <a href="https://flashparaiso-downloads.s3.sa-east-1.amazonaws.com/Reader_br_install.exe" class="btn">Download</a>
-            </div>
-
-            <div class="card">
-                <span>TeamViewer</span>
-                <a href="https://flashparaiso-downloads.s3.sa-east-1.amazonaws.com/TeamViewerQS_x64.exe" class="btn">Download</a>
-            </div>
-
-            <div class="card">
-                <span>Winrar</span>
-                <a href="https://flashparaiso-downloads.s3.sa-east-1.amazonaws.com/winrar-x64-720br.exe" class="btn">Download</a>
-            </div>
-
+        <div class="card">
+          <h3>⚙️ Instalação de Softwares</h3>
+          <p>Instalação segura de programas essenciais para seu uso diário.</p>
+          <a href="#contato">Solicitar</a>
         </div>
 
-    </div>
+        <div class="card">
+          <h3>🎮 Montagem de PC Gamer</h3>
+          <p>Montamos máquinas personalizadas com alto desempenho.</p>
+          <a href="#contato">Solicitar</a>
+        </div>
+
+        <div class="card">
+          <h3>💾 Backup e Recuperação</h3>
+          <p>Proteja seus dados ou recupere arquivos importantes.</p>
+          <a href="#contato">Solicitar</a>
+        </div>
+
+        <div class="card">
+          <h3>🔧 Suporte Técnico</h3>
+          <p>Atendimento rápido para resolver qualquer problema.</p>
+          <a href="#contato">Solicitar</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Serviços Realizados</h2>
+      <div class="portfolio">
+        <img src="imgs/Manutenção.png">
+        <img src="imgs/Formatação.png">
+        <img src="imgs/suporte.png">
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <h2>Contato</h2>
+      <p>📍 Paraisópolis, MG</p>
+      <p>📞 (35) 9936-4266</p>
+      <a href="#">WhatsApp</a>
+      <a href="https://www.google.com/maps?q=-22.55299272818086, -45.78072601099221" target="_blank" class="btn">
+          Localização
+      </a>
+    </section>
 
     <footer>
-        Flash Paraíso © 2026 - Todos os direitos reservados
+      <p>Flash Paraíso Informática © 2026</p>
     </footer>
-    </body>
+
+    <script>
+    function toggleMenu(){
+      document.getElementById('menu').classList.toggle('active');
+    }
+    </script>
+
+  </body>
 </html>
