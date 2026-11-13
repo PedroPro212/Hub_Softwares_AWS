@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="dark light">
+    <title>Laudos técnicos | Flash Informática</title>
+    <link rel="stylesheet" href="../styles/laudos.styles.css">
+    <script src="../js/vendor/jspdf.umd.min.js" defer></script>
+    <script src="../js/laudos.app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="../index.html"><span class="bolt">ϟ</span><span>FLASH
+                <small>INFORMÁTICA · PARAÍSO</small></span></a><nav class="site-links" aria-label="Navegação principal"><a href="../index.html">Início</a><a href="pcideal.html">PC Ideal</a><a href="hub_downloads.html">Downloads</a><a href="laudos.html" aria-current="page">Laudos</a></nav><a
+            href="../index.html">Voltar ao site ↗</a></header>
+    <div class="workspace">
+        <aside>
+            <div class="aside-title">SEUS ATENDIMENTOS</div><button id="new" class="primary wide">＋ Novo
+                laudo</button><label class="search">Buscar laudo<input id="search" type="search"
+                    placeholder="Tipo, data ou serviço"></label>
+            <div id="records"></div>
+            <div class="local-note"><strong>Dados neste navegador</strong>
+                <p>Faça backups em JSON. Este ambiente não tem login nem sincronização.</p><button
+                    id="exportAll">Exportar todos</button><button id="import">Importar JSON</button><input
+                    id="importFile" type="file" accept="application/json,.json" hidden>
+            </div>
+        </aside>
+        <main>
+            <div class="page-heading">
+                <div>
+                    <div class="eyebrow">ASSISTÊNCIA TÉCNICA / DOCUMENTAÇÃO</div>
+                    <h1>Laudo técnico<span>.</span></h1>
+                    <p>Marque os serviços e adicione testes, fotos e orientações quando necessário.</p>
+                </div>
+                <div class="actions"><button id="pdf" class="primary">Baixar PDF A5</button><button id="demo">Carregar exemplo</button><button id="preview">Visualizar PDF</button><button id="save" class="primary">Salvar laudo</button></div>
+            </div>
+            <div class="document-bar"><span id="currentTitle">Novo atendimento</span><span id="saveState"
+                    role="status">Ainda não salvo</span></div>
+            <nav id="steps" class="steps" aria-label="Etapas do laudo" hidden></nav>
+            <form id="editor"></form>
+            <div class="bottom-actions"><button id="delete" class="danger">Excluir laudo</button><button
+                    id="export">Exportar este JSON</button><button id="next" class="primary">Baixar PDF A5</button>
+            </div>
+            <p class="footnote">Flash Informática · Paraisópolis, MG · Ferramenta de uso local</p>
+        </main>
+    </div>
+    <dialog id="previewDialog">
+        <div class="preview-tools"><strong>Seu laudo · A5</strong><button id="previewDownload" class="primary">Baixar este PDF</button><button id="closePreview">Fechar</button></div>
+        <p class="pdf-help">Confira o documento antes de baixar. Para imprimir, use papel A5 e escala 100%. <a id="openPDF" target="_blank" rel="noopener">Abrir PDF em outra aba</a></p>
+        <iframe id="pdfFrame" title="Visualização do laudo em PDF A5"></iframe>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
